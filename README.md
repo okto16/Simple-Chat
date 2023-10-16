@@ -3,7 +3,7 @@
 Node.js: Sebuah lingkungan JavaScript di sisi server yang memungkinkan Anda untuk menjalankan kode JavaScript di sisi server.
 Socket.io: Library yang digunakan untuk mengimplementasikan komunikasi real-time antara server dan klien. Ini memungkinkan server dan klien untuk mengirim dan menerima pesan secara asinkron.
 
-## Fitur Utama:
+## Feature
 Pengguna dapat masuk: Pengguna dapat memasukkan nama pengguna mereka sebelum bergabung ke dalam chat room.
 Pengiriman Pesan: Pengguna dapat mengirim pesan teks ke semua pengguna lain yang ada dalam chat room yang sama.
 Penerimaan Pesan: Pengguna dapat menerima pesan yang dikirim oleh pengguna lain secara real-time.
