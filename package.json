@@ -1,0 +1,10 @@
+{
+  "name": "mdb-standard-app",
+  "version": "6.4.2",
+  "homepage": "https://mdbootstrap.com/docs/standard/",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  }
+}

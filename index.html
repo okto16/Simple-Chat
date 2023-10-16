@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<title>Aplikasi Chat Sederhana</title>
+<!-- MDB icon -->
+<link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<!-- Google Fonts Roboto -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+<!-- MDB -->
+<link rel="stylesheet" href="css/mdb.min.css" />
+
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/src/scss/bootstrap/_placeholders.scss">
+</head>
+
+<body>
+    <section style="background-color: #eee;">
+        <div class="container py-5">
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-6">
+
+                    <div class="card" id="chat2">
+                        <div class="card-body bg-info">
+                            <i class="fas fa-angle-left"></i>
+                            <p class="mb-0 fw-bold">Live chat</p>
+                            <i class="fas fa-times"></i>
+                        </div>
+                        <div class="card-header d-flex justify-content-between align-items-center p-3">
+                            <label for="username">Username :</label>
+                            <input type="text" id="username" class="rounded-input" />
+                            <button type="button" class="btn btn-primary btn-sm" data-mdb-ripple-color="dark" onclick="setNamaPengguna()">Masuk</button>
+                        </div>
+                        <div>
+                            <ul id="messages"></ul>
+                        </div>
+                        <div class="card-footer">
+                            <input  id="message" autocomplete="off" id="exampleFormControlInput1"
+                                placeholder="Type message">
+                            <button type="button" class="btn btn-primary btn-sm" data-mdb-ripple-color="dark" onclick="kirimPesan()">Kirim</i></button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+        var currentRecipient = '';
+        var currentRoom = 'default';
+        var currentUsername = ''; // Initialize the current username
+
+        function setNamaPengguna() {
+            currentUsername = document.getElementById('username').value; // Set the current username
+            const username = document.getElementById('username').value;
+            socket.emit('set user', username);
+        }
+
+        function kirimPesan() {
+            const pesan = document.getElementById('message').value;
+            socket.emit('chat message', pesan);
+            document.getElementById('message').value = '';
+        }
+
+
+        function ubahRoom() {
+            currentRoom = document.getElementById('room').value;
+            socket.emit('set room', currentRoom);
+        }
+
+        socket.on('chat message', (pesan) => {
+            const pesanBaru = document.createElement('li');
+            pesanBaru.textContent = pesan.sender === currentUsername ? pesan.message : `${pesan.sender}: ${pesan.message}`;
+
+            if (pesan.sender === currentUsername) {
+                pesanBaru.classList.add('sender');
+            } else {
+                pesanBaru.classList.add('receiver');
+            }
+
+            document.getElementById('messages').appendChild(pesanBaru);
+        });
+
+    </script>
+    <script type="text/javascript"></script>
+</body>
+
+</html>

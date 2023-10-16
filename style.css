@@ -1,0 +1,206 @@
+body {
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.chat-card {
+    border: none;
+    box-shadow: none;
+}
+
+.card-header {
+    background-color: #1acaf7;
+    color: #ffffff;
+    padding: 2px;
+    border-bottom: 1px solid #919191;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.card-header i {
+    cursor: pointer;
+
+}
+
+.card-header i:hover {
+    opacity: 0.8;
+
+}
+
+.card-body {
+    background-color: #42d5fa;
+    border: none;
+    padding: 1px;
+    border-bottom: 0px solid #000000;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.card-footer {
+    background-color: #ecebeb;
+    border: none;
+    padding: 2px;
+    border-top: 1px solid #919191;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px;
+    clear: both;
+    overflow: hidden;
+}
+
+.sender {
+    float: right;
+    clear: both;
+    padding: 1%;
+    border-radius: 10px;
+    background-color: #86ff8c;
+    margin-left: 50%;
+}
+
+.receiver {
+    float: left;
+    clear: both;
+    border-radius: 10px;
+    background-color: #86ff8c;
+    margin-right: 50%;
+}
+
+#message {
+    border: none;
+    width: 50%;
+    border-radius: 10px;
+}
+
+#messages {
+    padding: 15px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#username {
+    border: none;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 10vh;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#chat1 .form-outline .form-control~.form-notch div {
+    pointer-events: none;
+    border: 1px solid;
+    border-color: #eee;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+#chat1 .form-outline .form-control~.form-notch .form-notch-leading {
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-right: none;
+    border-radius: .65rem 0 0 .65rem;
+}
+
+#chat1 .form-outline .form-control~.form-notch .form-notch-middle {
+    flex: 0 0 auto;
+    max-width: calc(100% - 1rem);
+    height: 100%;
+    border-right: none;
+    border-left: none;
+}
+
+#chat1 .form-outline .form-control~.form-notch .form-notch-trailing {
+    flex-grow: 1;
+    height: 100%;
+    border-left: none;
+    border-radius: 0 .65rem .65rem 0;
+}
+
+#chat1 .form-outline .form-control:focus~.form-notch .form-notch-leading {
+    border-top: 0.125rem solid #39c0ed;
+    border-bottom: 0.125rem solid #39c0ed;
+    border-left: 0.125rem solid #39c0ed;
+}
+
+#chat1 .form-outline .form-control:focus~.form-notch .form-notch-leading,
+#chat1 .form-outline .form-control.active~.form-notch .form-notch-leading {
+    border-right: none;
+    transition: all 0.2s linear;
+}
+
+#chat1 .form-outline .form-control:focus~.form-notch .form-notch-middle {
+    border-bottom: 0.125rem solid;
+    border-color: #39c0ed;
+}
+
+#chat1 .form-outline .form-control:focus~.form-notch .form-notch-middle,
+#chat1 .form-outline .form-control.active~.form-notch .form-notch-middle {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    transition: all 0.2s linear;
+}
+
+#chat1 .form-outline .form-control:focus~.form-notch .form-notch-trailing {
+    border-top: 0.125rem solid #39c0ed;
+    border-bottom: 0.125rem solid #39c0ed;
+    border-right: 0.125rem solid #39c0ed;
+}
+
+#chat1 .form-outline .form-control:focus~.form-notch .form-notch-trailing,
+#chat1 .form-outline .form-control.active~.form-notch .form-notch-trailing {
+    border-left: none;
+    transition: all 0.2s linear;
+}
+
+#chat1 .form-outline .form-control:focus~.form-label {
+    color: #39c0ed;
+}
+
+#chat1 .form-outline .form-control~.form-label {
+    color: #bfbfbf;
+}
