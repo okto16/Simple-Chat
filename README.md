@@ -10,7 +10,8 @@ Penerimaan Pesan: Pengguna dapat menerima pesan yang dikirim oleh pengguna lain 
 Pesan Selamat Datang: Pengguna menerima pesan selamat datang ketika mereka bergabung ke dalam ruangan chat.
 
 ## Quick demo
-![image](https://github.com/okto16/Simple-Chat/assets/95692091/f5572deb-e292-4083-8f25-fed0d062f284)
+
+https://github.com/okto16/Simple-Chat/assets/95692091/15339c34-2ee6-4861-913a-096d7e9676c9
 
 ## Running this project
 Untuk menjalankan proyek chat sederhana berbasis JavaScript, Anda perlu mengikuti beberapa langkah dasar. Dalam contoh ini, saya akan menggunakan Node.js dan Socket.io untuk membuat aplikasi chat. Berikut langkah-langkahnya:
